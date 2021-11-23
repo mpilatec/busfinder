@@ -1,0 +1,44 @@
+h1 {
+	color: black;
+text-align: center;}
+ul {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	background-color:red;
+}
+
+/* block for vertical and inline for horizontal*/
+/*navigation bar*/
+li {
+	display: inline;
+	float: right;
+}
+li a {
+	display: inline;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration:none;
+}
+li a:hover {
+	background-color: blue;
+	color:white;
+}
+li a.active {
+	background-color:#04AA6D;
+	color:white;
+}
+li a:hover:not(.active) {
+	background-color:#555;
+	color:white;
+}
+
+/*body*/
+body {
+	text-align: center;
+	
+}
+
+/*number resize*/
+input[type='number']{ width:80px;
+}
