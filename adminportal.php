@@ -111,12 +111,13 @@ $sql="select * from tblbooking where campfrom='".$campfrom."' AND campto='".$cam
 $results=$conn->query($sql);
 if($results->num_rows>0)
 {
-	echo "There are ".$results->num_rows ." seats booked";
+	echo "There are ".$results->num_rows ." seats booked form ".$campfrom." to ".$campto." at ".$busttime;
 	
 	 ?> 
-	 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"style="color:black;">
+	 <table class="table table-bordered" id="dataTable" width="60%" cellspacing="10"style="color:black;">
 <thead>
 <tr> 
+<th>No.</th>
 <th>studentNo</th>
 <th>name</th>
 <th>date</th>
@@ -125,16 +126,19 @@ if($results->num_rows>0)
 
 </tr>
 </thead>
+
 <tbody>
 	 
 	 <?php
+	
+	 $number=1;
 	while($row = $results->fetch_assoc()){
 		
 	?>
 <tr>
+<td><?php echo $number ?></td>
 <td><?php    echo  $row["studentNo"]; ?></td>
 <td><?php    echo  $row["name"]; ?></td>
-
 <td><?php    echo $row["date"]; ?></td>
 <td><?php    echo $row["campfrom"]; ?></td>
 <td><?php    echo $row["campto"]; ?></td>
@@ -143,7 +147,7 @@ if($results->num_rows>0)
 
 <?php	
 		
-		
+	$number=$number+1;	
 	}	
 	
 	
