@@ -10,6 +10,7 @@ include ("connection/connection.php");
 <ul>
 <li><a class='active' href='portal.php'>portal<a/></li>
 <li><a href='logout.php'>logout<a/></li>
+<li><a href='bookings.php'>bookings<a/></li>
 
 </ul>
 
